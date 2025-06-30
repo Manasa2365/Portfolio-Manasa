@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assests/css/projectfrontend.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
   <title>Frontend</title>
   
 </head>
@@ -44,29 +45,7 @@
 </footer>
 
   <script>
-    // Cursor dots effect
-    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
-
-    document.addEventListener('mousemove', (e) => {
-      const dot = document.createElement('div');
-      dot.className = 'cursor-dot';
-
-      const x = e.pageX;
-      const y = e.pageY;
-
-      dot.style.left = `${x}px`;
-      dot.style.top = `${y}px`;
-
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      dot.style.backgroundColor = color;
-      dot.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
-
-      document.body.appendChild(dot);
-
-      setTimeout(() => {
-        dot.remove();
-      }, 800);
-    });
+   
 
     // Video play/pause on click
     const projectVideo = document.getElementById('projectvideo');
