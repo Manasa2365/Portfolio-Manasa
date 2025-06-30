@@ -153,11 +153,48 @@ button:hover {
 
 /* Footer */
 footer {
+  background-color: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
   text-align: center;
-  margin-top: 4rem;
-  color: #aaa;
-  font-size: 0.9rem;
+  padding: 20px 0;
 }
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social__icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social__icons a i {
+  font-size: 28px;
+  transition: transform 0.3s;
+}
+
+/* Brand colors */
+.social__icons i.linkedin {
+  color: #0077b5;
+}
+
+.social__icons i.instagram {
+  color: #e4405f;
+}
+
+.social__icons i.github {
+  color: #ffffff;
+}
+
+.social__icons a:hover i {
+  transform: scale(1.2);
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
