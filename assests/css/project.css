@@ -1,0 +1,169 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00fff0;
+  text-shadow: 0 0 10px #00fff0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Project section */
+.projects {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #00fff0;
+  text-shadow: 0 0 15px #00fff0;
+}
+
+.title span {
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+}
+
+.project {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00fff0;
+}
+
+.project h2 {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+  margin-bottom: 1rem;
+}
+
+.project p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project img,
+.project video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00fff0, 0 0 15px #ff00ff;
+  margin-top: 1rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #ff00ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #00fff0;
+  color: black;
+  box-shadow: 0 0 15px #00fff0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}

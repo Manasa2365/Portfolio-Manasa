@@ -1,0 +1,151 @@
+
+    /* Navigation Bar */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+      .nav h1 {
+        font-size: 32px;
+        color: purple;
+        animation: slideIn 1s ease-out;
+      }
+      .back-button {
+        text-decoration: none;
+        background: purple;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+      .back-button:hover {
+        background: #6a0dad;
+        transform: scale(1.05);
+      }
+  
+      /* Project Container */
+      .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 20px 50px 20px;
+        text-align: center;
+      }
+  
+      /* Video Card */
+      .video-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 1000px;
+        width: 90%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 1s ease-in-out;
+      }
+  
+      /* Video Styling */
+      .video-card video {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        cursor: pointer;
+      }
+      .video-card video:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      }
+  
+      /* Project Details */
+      .project-details {
+        margin-top: 30px;
+      }
+      .project-details h2 {
+        font-size: 30px;
+        color: purple;
+        margin-bottom: 15px;
+      }
+      .project-details p {
+        font-size: 20px;
+        color: #333;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      footer .container {
+          text-align: center;
+          margin-top: 40px;
+      }
+      
+      footer a {
+          text-decoration: none;
+          font-size: 18px;
+          color: #a855f7;
+          margin: 0 10px;
+          padding: 8px 14px;
+          border-radius: 8px;
+          transition: background 0.3s, transform 0.2s;
+          background-color: rgba(255, 255, 255, 0.7);
+      }
+      
+      footer a.active {
+          background-color: #a855f7;
+          color: white;
+          font-weight: bold;
+      }
+      
+      footer a:hover {
+          background-color: #d8b4fe;
+          transform: scale(1.1);
+      }
+      /* Cursor Dot */
+      .cursor-dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1000;
+        transform: translate(-50%, -50%);
+        animation: dotFade 1s forwards;
+      }
+  
+      /* Animations */
+      @keyframes dotFade {
+        to {
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  

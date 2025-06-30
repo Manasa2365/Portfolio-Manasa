@@ -1,0 +1,179 @@
+body {
+    background: linear-gradient(to right, #f3e5ff, #d8b4fe);
+    font-family: Arial, sans-serif;
+    color: #333333;
+    padding: 20px;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar - Unchanged Font Style */
+.navigation nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.navigation h1 {
+    font-size: 28px;
+    color: #333333;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #a855f7;
+    transition: 0.4s ease;
+}
+
+.navigation ul li a:hover {
+    color: #a855f7;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Content Box */
+.project-content {
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.85), rgba(245,225,255,0.9));
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(162, 89, 255, 0.2);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Headings with glow */
+.project-content h1, h2 {
+    text-align: center;
+    color: #6b21a8;
+    text-shadow: 0 0 5px #e0b3ff, 0 0 15px #d8b4fe;
+    transition: transform 0.3s ease;
+}
+
+.project-content h1:hover,
+.project-content h2:hover {
+    transform: scale(1.05);
+}
+
+/* Paragraphs and Lists */
+p, ul {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2e2e2e;
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+/* Image Styling */
+.project-content img {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(162, 89, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(138, 43, 226, 0.6);
+}
+
+/* Emphasized text */
+.project-content strong {
+    color: #a855f7;
+    font-weight: bold;
+}
+
+/* Project Link Button */
+.project-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.project-link a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #a855f7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+.project-link a:hover {
+    background-color: #9333ea;
+    transform: scale(1.05);
+}
+
+/* Footer Buttons */
+footer .container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #a855f7;
+    margin: 0 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+footer a.active {
+    background-color: #a855f7;
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover {
+    background-color: #d8b4fe;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}

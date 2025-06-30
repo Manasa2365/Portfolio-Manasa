@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00fff0;
+  text-decoration: none;
+  text-shadow: 0 0 10px #00fff0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Section Title */
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #00fff0;
+  text-shadow: 0 0 15px #00fff0;
+  margin: 3rem 0 2rem;
+}
+
+.title span {
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+}
+
+/* Achievement Card */
+.achievements {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.achievement {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00fff0;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.achievement h4 {
+  color: #ddd;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.achievement span {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+.achievement img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 0 15px #00fff0, 0 0 10px #ff00ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}

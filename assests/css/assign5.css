@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav__content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #00fff0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 10px #00fff0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+input[type="checkbox"],
+.checkbox {
+  display: none;
+}
+
+/* Assignment Container */
+.assignment {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.assignment__container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #8000c9;
+}
+
+.assignment .title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #00fff0;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 10px #00fff0;
+}
+
+.assignment h2 {
+  color: #ff00ff;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.assignment p,
+.assignment li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 0.8rem;
+  color: #ffffff;
+}
+
+.assignment ul {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.assignment img,
+.assignment video {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #6f00a8;
+  transition: transform 0.3s ease;
+}
+
+.assignment img:hover,
+.assignment video:hover {
+  transform: scale(1.03);
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background: #ff00ff;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #00fff0;
+  color: #000;
+  box-shadow: 0 0 15px #00fff0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background: #1a1a1a;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .assignment .title {
+    font-size: 2rem;
+  }
+
+  .assignment__container {
+    padding: 1.2rem;
+  }
+}
