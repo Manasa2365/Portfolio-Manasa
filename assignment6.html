@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 6 - PCB Design</title>
+  <link rel="stylesheet" href="assests/css/assign6.css" />
+  <link rel="stylesheet" href="assests/css/cursor.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Manasa</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Achieve.html">Achievements</a></li>
+        <li><a href="Assignments.html">Coursework</a></li>
+        <li><a href="projectfrontend.html">Frontend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="assignment">
+    <div class="assignment__container">
+
+      <h1 class="title">Non-Invasive Glucometer - PCB Design using KiCad</h1>
+
+      <h2>Introduction:</h2>
+      <p>This project is based on a non-invasive glucose monitoring device using bio-impedance analysis. The PCB was designed to interface an <strong>impedance analyzer</strong> with signal conditioning components like <strong>AD620</strong>, microcontroller, and BLE module.</p>
+
+      <h2>Design Highlights:</h2>
+      <ul>
+        <li>Used <strong>KiCad</strong> for schematic and PCB layout</li>
+        <li>Included analog front-end: AD620 instrumentation amplifier</li>
+        <li>Controlled signal path for impedance measurement with electrode interface</li>
+        <li>Optimized layout for analog precision and minimal noise</li>
+        <li>Prepared Gerber files for fabrication</li>
+      </ul>
+
+      <h2>PCB Layout Preview:</h2>
+      <img src="assests/images/Screenshot 2025-06-24 103032.png" alt="Glucometer PCB 1" />
+      <img src="assests/images/WhatsApp Image 2025-06-25 at 14.39.12_0121c232.jpg" alt="Glucometer PCB 2" />
+
+      <h2>Conclusion:</h2>
+      <p>This project enhanced my skills in analog circuit design, proper routing for low-noise signals, and multi-layer PCB planning. I also learned the complete pipeline from schematic to Gerber export in KiCad.</p>
+
+      <hr />
+
+      <h1 class="title">555 Timer Based Projects - Milled PCB Designs</h1>
+
+      <h2>Overview:</h2>
+      <p>Alongside KiCad, I explored practical PCB fabrication using <strong>PCB milling</strong>. I designed and milled compact single-sided PCBs for 555-based circuits like LED blinkers, sound generators, and delay timers.</p>
+
+      <h2>Design Features:</h2>
+      <ul>
+        <li>Used 555 timer in astable and monostable configurations</li>
+        <li>Designed simple PCB traces and pads in KiCad</li>
+        <li>Converted layout to SVG and G-code for CNC milling</li>
+        <li>Milled on copper-clad boards using a CNC machine</li>
+        <li>Manually soldered SMD and through-hole components</li>
+      </ul>
+
+      <img src="assests/images/Screenshot 2025-06-29 100639.png" alt="555 Timer PCB" />
+
+      <h2>Conclusion:</h2>
+      <p>This hands-on experience gave me confidence in handling the complete hardware design cycle—from schematic to real-world PCB. It strengthened my understanding of layout constraints and manufacturing tolerances.</p>
+
+    </div>
+  </section>
+
+  <script>
+    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+    document.addEventListener('mousemove', (e) => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      dot.style.left = `${e.clientX + window.scrollX}px`;
+      dot.style.top = `${e.clientY + window.scrollY}px`;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.backgroundColor = color;
+      document.body.appendChild(dot);
+      setTimeout(() => dot.remove(), 1000);
+    });
+  </script>
+
+</body>
+</html>

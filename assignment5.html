@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electro Diaries</title>
+  <link rel="stylesheet" href="assests/css/assign5.css"/>
+  <link rel="stylesheet" href="assests/css/cursor.css"/>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Manasa</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Achieve.html">Achievements</a></li>
+        <li><a href="Assignments.html">Coursework</a></li>
+        <li><a href="projectfrontend.html">Frontend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="assignment">
+    <div class="assignment__container">
+      <h1 class="title">4-Way Capacitive Touch Sensor with Real-Time Logging</h1>
+
+      <h2>Introduction:</h2>
+      <p>This project detects touch events on 4 pads using a capacitive touch sensor connected to an ESP8266. It logs real-time data to a Google Sheet via a deployed Google Apps Script.</p>
+
+      <h2>Key Features:</h2>
+      <ul>
+        <li>Real-time sensor logging to cloud</li>
+        <li>WiFi-based integration using HTTP requests</li>
+        <li>Visual data tracking using Google Sheets</li>
+      </ul>
+
+      <h2>Image Preview:</h2>
+      <img src="assests/images/Capacitive-TTP224-4-Channels-Touch-Sensor-Module-wire.jpg" alt="4-Way Capacitive Touch Sensor Image" />
+
+      <a href="assests/images/Touch Sensor (4).pdf" class="download-btn" download>📥 Download Touch Sensor Code</a>
+
+      <hr style="margin: 60px 0; border-top: 2px dashed #c084fc;" />
+
+      <h1 class="title">RFID Entry System using Servo, LED & Buzzer</h1>
+
+      <h2>Introduction:</h2>
+      <p>This project simulates a smart entry system using an RFID module. A matched tag triggers a servo unlock and green light, while a mismatch activates a buzzer and red light.</p>
+
+      <h2>Demo Video:</h2>
+      <video controls>
+        <source src="assests/images/WhatsApp Video 2025-04-17 at 4.22.46 PM (1) (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <a href="assests/images/RFID TAG.pdf" class="download-btn" download>📥 Download RFID Code</a>
+    </div>
+  </section>
+
+  <script>
+    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+    document.addEventListener('mousemove', (e) => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      const x = e.clientX + window.scrollX;
+      const y = e.clientY + window.scrollY;
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.backgroundColor = color;
+      document.body.appendChild(dot);
+      setTimeout(() => { dot.remove(); }, 1000);
+    });
+  </script>
+</body>
+</html>

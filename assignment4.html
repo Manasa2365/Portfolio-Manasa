@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 4 - Instagram UI with Figma</title>
+  <link rel="stylesheet" href="assests/css/assign4.css" />
+  <link rel="stylesheet" href="assests/css/cursor.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Manasa</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Achieve.html">Achievements</a></li>
+        <li><a href="Assignments.html">Coursework</a></li>
+        <li><a href="projectfrontend.html">Frontend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="assignment">
+    <div class="assignment__container">
+      <h1 class="title">UI/UX Design – Instagram Interface Replication using Figma</h1>
+
+      <h2>Introduction:</h2>
+      <p>In the UI/UX design session, I explored modern design principles using <strong>Figma</strong>. As an assignment, I replicated the popular social media platform <strong>Instagram's user interface</strong> to understand layout composition, spacing, font hierarchy, color schemes, and user flow.</p>
+
+      <h2>Objectives:</h2>
+      <ul>
+        <li>Understand interface breakdown of a real-world app.</li>
+        <li>Learn how to use Figma tools for prototyping and component reuse.</li>
+        <li>Gain skills in wireframing, alignment, spacing, and consistency.</li>
+      </ul>
+
+      <h2>Tools & Techniques Used:</h2>
+      <ul>
+        <li><strong>Figma Components:</strong> Reusable assets like buttons, icons, navbars, and cards.</li>
+        <li><strong>Auto Layout:</strong> For responsive arrangement and proper spacing.</li>
+        <li><strong>Frame Nesting:</strong> Structured screens using nested frames and constraints.</li>
+        <li><strong>Color Palettes:</strong> Picked colors matching Instagram’s native UI.</li>
+        <li><strong>Icons & Fonts:</strong> Used Figma plugins to import Material icons and Google fonts.</li>
+        <li><strong>Prototyping:</strong> Linked screens to simulate real user flow between Home, Profile, and Explore tabs.</li>
+      </ul>
+
+      <h2>Pages Designed:</h2>
+      <ul>
+        <li><strong>Login / Signup Screen</strong></li>
+        <li><strong>Instagram Home Feed</strong></li>
+        <li><strong>Profile Page</strong></li>
+        <li><strong>Search/Explore Page</strong></li>
+        <li><strong>Navigation Bar & Bottom Tab</strong></li>
+      </ul>
+
+      <h2>Design Preview:</h2>
+      <video controls 
+        style="display: block; max-width: 700px; width: 100%; margin: 20px auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(162, 89, 255, 0.3);">
+        <source src="assests/images/insta figma - Google Chrome 2025-05-25 14-44-25 (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h2>Conclusion:</h2>
+      <p>This project strengthened my understanding of UI structure, hierarchy, and consistency. Replicating Instagram helped me analyze the decisions behind a globally used app and apply those principles in my own design work.</p>
+
+      <p>In the future, I aim to design my own original app screens and collaborate on live UI/UX projects with developers.</p>
+    </div>
+  </section>
+  
+  <script>
+    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+    document.addEventListener('mousemove', (e) => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      const x = e.clientX + window.scrollX;
+      const y = e.clientY + window.scrollY;
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.backgroundColor = color;
+      document.body.appendChild(dot);
+      setTimeout(() => { dot.remove(); }, 1000);
+    });
+  </script>
+</body>
+</html>

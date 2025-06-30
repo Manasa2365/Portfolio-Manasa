@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 7 - Industrial Automation</title>
+  <link rel="stylesheet" href="assests/css/assign7.css"/>
+  <link rel="stylesheet" href="assests/css/cursor.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Manasa</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Achieve.html">Achievements</a></li>
+        <li><a href="Assignments.html">Coursework</a></li>
+        <li><a href="projectfrontend.html">Frontend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="assignment">
+    <div class="assignment__container">
+      <h1 class="title">Design of 6-Degree of Freedom Robotic Arm in Fusion 360</h1>
+
+      <h2>Introduction:</h2>
+      <p>This project focuses on designing a 6-degree of freedom (6-DOF) robotic arm using <strong>Fusion 360</strong> as part of the Industrial Automation session. The model mimics the motion of industrial robot arms used in manufacturing, packaging, welding, and precision tasks.</p>
+
+      <h2>Project Highlights:</h2>
+      <ul>
+        <li>Realistic joint-based motion: base, shoulder, elbow, wrist, gripper</li>
+        <li>Parametric design with accurate degrees of freedom</li>
+        <li>Modular and scalable CAD architecture</li>
+        <li>Assembly with precise constraints and axis alignment</li>
+      </ul>
+
+      <h2>Design Workflow:</h2>
+      <ol>
+        <li><strong>Base Design:</strong> Started with a stable rotating base with mounting holes</li>
+        <li><strong>Shoulder & Elbow:</strong> Created as hollow sections for motor & gear mounting</li>
+        <li><strong>Wrist & End Effector:</strong> Designed gripper with parallel jaw structure</li>
+        <li><strong>Assembly:</strong> Used <code>Joint</code>, <code>Revolute</code>, and <code>As-Built Joint</code> tools for motion planning</li>
+      </ol>
+
+      <h2>Demo Video:</h2>
+      <video controls style="display:block; width:100%; max-width:700px; margin: 2rem auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(162, 89, 255, 0.3);">
+        <source src="assests/images/robotic arm v11 (1) (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h2>Conclusion:</h2>
+      <p>This 6-DOF robotic arm model demonstrates my understanding of mechanical design for motion systems, CAD assembly planning, and industrial applications. In future, I aim to simulate its motion using Fusion 360 animation workspace or integrate it with physical servo motors and microcontrollers.</p>
+    </div>
+  </section>
+
+  <script>
+    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+    document.addEventListener('mousemove', (e) => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      const x = e.clientX + window.scrollX;
+      const y = e.clientY + window.scrollY;
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.backgroundColor = color;
+      document.body.appendChild(dot);
+      setTimeout(() => { dot.remove(); }, 1000);
+    });
+  </script>
+</body>
+</html>

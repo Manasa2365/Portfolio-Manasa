@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geodesic Sphere - Assignment 1</title>
+  <link rel="stylesheet" href="assests/css/assignment1.css" />
+  <link rel="stylesheet" href="assests/css/cursor.css" />
+  <script defer src="script.js"></script>
+</head>
+<body style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e);">
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav__content">
+      <div class="logo">
+        <a href="index.html">Manasa</a>
+      </div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Achieve.html">Achievements</a></li>
+        <li><a href="Assignments.html">Coursework</a></li>
+        <li><a href="projectfrontend.html">Frontend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Assignment Section -->
+  <section class="assignment">
+    <h1 class="title">Assignment 1: <span>Geodesic Sphere</span></h1>
+
+    <div class="assignment-content">
+      <h2>Introduction:</h2>
+      <p>A geodesic sphere is a structure composed of hexagons and pentagons arranged in a spherical pattern. These structures are widely used in architecture, engineering, and material science due to their strength, lightweight properties, and efficient distribution of stress.</p>
+      <p>This project focuses on designing and assembling a 50mm diameter geodesic sphere using Fusion 360. The goal is to understand the geometric arrangement of hexagons and pentagons and effectively apply assembly techniques in Fusion 360.</p>
+
+      <h2>Design Methodology:</h2>
+      <h3>Geometric Considerations</h3>
+      <ul>
+        <li><strong>Diameter:</strong> 50mm</li>
+        <li><strong>Edge length:</strong> 19.5mm</li>
+        <li><strong>Primary Shapes:</strong> 20 Hexagons and 12 Pentagons</li>
+        <li><strong>Layer-wise arrangement:</strong> The sphere is built layer by layer with precise angles.</li>
+      </ul>
+
+      <h2>Steps in Fusion 360:</h2>
+      <h3>Step 1: Creating the Base Layer</h3>
+      <ul>
+        <li>Sketch a hexagon with an edge length of 19.5mm.</li>
+        <li>Add a pentagon adjacent to it.</li>
+        <li>Use patterns or copies to begin the base layer.</li>
+      </ul>
+
+      <h3>Step 2: Layer-by-Layer Construction</h3>
+      <ul>
+        <li>Each layer is tilted from -90° onward.</li>
+        <li>Duplicate shapes and adjust orientation using the move and rotate tools.</li>
+        <li>Use joints to fix shapes together.</li>
+      </ul>
+
+      <img src="assests/images/Screenshot 2025-03-02 185420.png" alt="Base Layer" />
+
+      <h3>Step 3: Mirroring and Completing the Sphere</h3>
+      <ul>
+        <li>Mirror half the structure for symmetry.</li>
+        <li>Join mirrored parts edge-to-edge.</li>
+      </ul>
+
+      <img src="assests/images/Screenshot 2025-03-02 185130.png" alt="Half Sphere" />
+
+      <h3>Step 4: Final Join</h3>
+      <ul>
+        <li>Use Align and Joint to connect final parts.</li>
+        <li>Apply the Combine tool for a unified body.</li>
+      </ul>
+
+      <img src="assests/images/Screenshot 2025-03-02 185218.png" alt="Joined Sphere" />
+
+      <h2>Challenges and Solutions:</h2>
+      <h3>Aligning Faces</h3>
+      <p><strong>Solution:</strong> Used the Align tool with face references.</p>
+
+      <h3>Symmetry</h3>
+      <p><strong>Solution:</strong> Used Mirror and Pattern tools.</p>
+
+      <h3>Fitting Angles</h3>
+      <p><strong>Solution:</strong> Used Rotate tool and layer logic.</p>
+
+      <h2>Conclusion:</h2>
+      <p>This project demonstrated 3D design principles using Fusion 360. Key learning includes geometric modeling, parametric control, and assembly accuracy. The geodesic sphere shows how digital tools can model real-world engineering objects.</p>
+
+      <h2>References:</h2>
+      <img src="assests/images/Screenshot 2025-03-09 143908.png" alt="References" />
+
+      <h2>LaserCAD Export:</h2>
+      <p>To export for laser cutting:</p>
+      <ol>
+        <li>Right-click the sketch → Save as DXF</li>
+        <li>Import DXF into LaserCAD</li>
+      </ol>
+      <img src="assests/images/Screenshot 2025-03-02 201449.png" alt="LaserCAD Export" />
+    </div>
+  </section>
+
+ 
+</body>
+</html>

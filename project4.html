@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assests/css/projectfrontend.css">
+  <title>Frontend</title>
+  
+</head>
+
+<body>
+
+  <div class="nav">
+    <h1>Number Guessing Game</h1>
+    <a href="index.html" class="back-button">← Back to Portfolio</a>
+  </div>
+
+  <section class="project-container">
+    <div class="video-card">
+      <video id="projectvideo" controls>
+        <source src="assests/images/Number Guessing Game Output.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-details">
+        <h2>Project Description</h2>
+        <p>A fun guessing game where the player tries to guess a randomly generated number. The game provides hints like "Too High" or "Too Low" after each attempt.
+
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+        <a href="project3.html"><</a>
+        <a href="projectfrontend.html" >1</a>
+        <a href="project2.html">2</a>
+        <a href="project3.html" >3</a>
+        <a href="project4.html"class="active">4</a>
+        <a href="project5.html">5</a>
+        <a href="project6.html">6</a>
+        <a href="project5.html">></a>
+    </div>
+   
+</footer>
+
+  <script>
+    // Cursor dots effect
+    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+
+    document.addEventListener('mousemove', (e) => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+
+      const x = e.pageX;
+      const y = e.pageY;
+
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.backgroundColor = color;
+      dot.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+
+      document.body.appendChild(dot);
+
+      setTimeout(() => {
+        dot.remove();
+      }, 800);
+    });
+
+    // Video play/pause on click
+    const projectVideo = document.getElementById('projectvideo');
+    if (projectVideo) {
+      projectVideo.addEventListener('click', () => {
+        if (projectVideo.paused) {
+          projectVideo.play();
+        } else {
+          projectVideo.pause();
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
