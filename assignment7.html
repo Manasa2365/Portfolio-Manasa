@@ -61,20 +61,6 @@
     </div>
   </section>
 
-  <script>
-    const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
-    document.addEventListener('mousemove', (e) => {
-      const dot = document.createElement('div');
-      dot.className = 'cursor-dot';
-      const x = e.clientX + window.scrollX;
-      const y = e.clientY + window.scrollY;
-      dot.style.left = `${x}px`;
-      dot.style.top = `${y}px`;
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      dot.style.backgroundColor = color;
-      document.body.appendChild(dot);
-      setTimeout(() => { dot.remove(); }, 1000);
-    });
-  </script>
+
 </body>
 </html>
